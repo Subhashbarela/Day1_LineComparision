@@ -10,7 +10,8 @@ namespace Day1_LineComparisonDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to line Comparision Program");
-        }
+            LineComparision line = new LineComparision(10,20,30,40);
+            line.Calculate();
+                }
     }
 }
