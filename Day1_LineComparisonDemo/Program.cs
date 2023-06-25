@@ -13,7 +13,7 @@ namespace Day1_LineComparisonDemo
             string ans = "";
             do
             {
-                Console.WriteLine(" 1: Line Copmarision Program \n 2: Check Equality Of Line");
+                Console.WriteLine(" 1: Line Copmarision Program \n 2: Check Equality Of Line \n 3: Check Equality using compare method");
                 Console.WriteLine("Enter the choice");
                 int choice = int.Parse(Console.ReadLine());
                 switch (choice)
@@ -25,6 +25,12 @@ namespace Day1_LineComparisonDemo
                     case 2:
                         CheckEqualityOfLine equalityOfLine = new CheckEqualityOfLine();
                         equalityOfLine.Point();
+                        break;
+                    case 3:
+                        CheckEqualityUsingCompareMethod compareLine = new CheckEqualityUsingCompareMethod();
+                        compareLine.Point_Of_First_Line(10, 20, 30, 40);
+                        compareLine.Point_Of_Last_tLine(10, 20, 30, 40);
+                        compareLine.CompareLine();
                         break;
                     default:
                         Console.WriteLine("Please insert valid input");
