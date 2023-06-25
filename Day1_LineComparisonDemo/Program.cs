@@ -10,8 +10,29 @@ namespace Day1_LineComparisonDemo
     {
         static void Main(string[] args)
         {
-            LineComparision line = new LineComparision(10,20,30,40);
-            line.Calculate();
+            string ans = "";
+            do
+            {
+                Console.WriteLine(" 1: Line Copmarision Program \n 2: Check Equality Of Line");
+                Console.WriteLine("Enter the choice");
+                int choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1:
+                        LineComparision line = new LineComparision(10, 20, 30, 40);
+                        line.Calculate();
+                        break;
+                    case 2:
+                        CheckEqualityOfLine equalityOfLine = new CheckEqualityOfLine();
+                        equalityOfLine.Point();
+                        break;
+                    default:
+                        Console.WriteLine("Please insert valid input");
+                        break;
                 }
+                Console.WriteLine("Do you want to continue ?");
+                ans = Console.ReadLine();
+            } while (ans == "yes" || ans == "y");
+        }
     }
 }
